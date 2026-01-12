@@ -1,38 +1,34 @@
-# RL-Based Intelligent Tutoring System 🎓
+# 🎓 RL-Based Intelligent Tutoring System
 
-## Project Overview
-This project implements **Reinforcement Learning (RL)** agents to optimize curriculum sequencing in an Intelligent Tutoring System (ITS). Using **Python** and **Stable-Baselines3**, I trained PPO and DQN agents to act as virtual tutors, dynamically adjusting quiz difficulty to maximize student learning speed and engagement.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![PyTorch](https://img.shields.io/badge/Framework-PyTorch-red)
+![Stable-Baselines3](https://img.shields.io/badge/RL-Stable--Baselines3-green)
+![Status](https://img.shields.io/badge/Status-Complete-success)
 
-This project demonstrates the application of RL in EdTech, moving beyond simple heuristic rules to adaptive, data-driven decision-making.
+## 📖 Project Overview
+This project implements **Reinforcement Learning (RL)** agents to optimize curriculum sequencing in an Intelligent Tutoring System (ITS). Using **Python** and **Stable-Baselines3**, I trained **PPO** and **DQN** agents to act as virtual tutors, dynamically adjusting quiz difficulty to maximize student learning speed and engagement.
+
+The system models the **Zone of Proximal Development (ZPD)**, ensuring students are challenged enough to learn but not so much that they become frustrated.
 
 ## 🚀 Key Features
-* **Custom Gymnasium Environment:** Built a simulation modeling the **Zone of Proximal Development (ZPD)**. It tracks hidden states like *Student Mastery* and *Engagement* to simulate realistic learner behavior.
-* **Reward Engineering:** Designed a composite reward function that balances rapid skill acquisition (learning gain) with retention (engagement penalty for boredom/frustration).
-* **State Space Engineering:** Utilized a sliding window of recent performance (accuracy trends, response times) to give the agent temporal context for decision-making.
+* **Custom Gymnasium Environment:** Simulates a learner's hidden states (*Mastery* & *Engagement*) and response dynamics (accuracy & response time).
+* **Adaptive Difficulty:** Agents learn to scale difficulty in real-time based on student performance history.
+* **Reward Engineering:** Composite reward function balancing **Learning Gain** (Mastery) vs. **Retention** (Engagement).
+* **Interactive Dashboard:** Live Streamlit app to visualize the agent's decision-making process.
 
 ## 📊 Results
 The RL agents were evaluated against static and heuristic (rule-based) baselines:
-* **DQN Agent:** Achieved full mastery **20% faster** than heuristic methods.
-* **Adaptability:** The agents successfully identified the optimal difficulty curve to maintain the student's engagement without causing frustration.
+* **Performance:** DQN Agent achieved full mastery **20% faster** than heuristic methods.
+* **Engagement:** RL agents successfully maintained student engagement by avoiding "boredom" (too easy) and "frustration" (too hard) traps.
 
 ![Evaluation Graph](evaluation_results.png)
 
-## 🛠️ Tech Stack
-* **Language:** Python 3.10+
-* **Environment:** Gymnasium (Custom Env)
-* **RL Algorithms:** PPO, DQN (Stable-Baselines3)
-* **Analysis:** Matplotlib, NumPy, Pandas
+## 🎮 Try the Live Demo
+You can run a real-time simulation of the tutoring session using the interactive dashboard:
 
-## 📂 Project Structure
-```text
-rl-intelligent-tutoring/
-│
-├── tutoring_env.py       # Custom Gymnasium Environment (The "Student")
-├── agents.py             # Training script for PPO and DQN agents
-├── evaluation.py         # Comparison script (RL vs. Heuristic vs. Static)
-├── requirements.txt      # Project dependencies
-└── README.md             # Project documentation
-```
+```bash
+# Run the Streamlit App
+streamlit run demo.py
 
 ## Created By
 
