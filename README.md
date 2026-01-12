@@ -29,7 +29,7 @@ You can run a real-time simulation of the tutoring session using the interactive
 ```bash
 # Run the Streamlit App
 streamlit run demo.py
-
+```
 ## Created By
 
 Built by Munzer Ahmed
