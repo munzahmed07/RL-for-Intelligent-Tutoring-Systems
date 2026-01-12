@@ -32,3 +32,8 @@ rl-intelligent-tutoring/
 ├── evaluation.py         # Comparison script (RL vs. Heuristic vs. Static)
 ├── requirements.txt      # Project dependencies
 └── README.md             # Project documentation
+
+## Created By
+
+Built by Munzer Ahmed
+
